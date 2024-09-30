@@ -1,0 +1,52 @@
+body {
+    padding-inline: 40px;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.roman-numbers {
+    list-style-type: upper-roman;
+}
+
+.wi-fi {
+    list-style-image: url("wifi.ico");
+}
+
+li {
+    font-size: 40px;
+}
+
+#customers {
+    margin-top: 50px;
+    border: 1px solid limegreen;
+    border-collapse: collapse;
+    width: 80%;
+    margin-inline: auto;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers td {
+    text-align: center;
+    padding: 20px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}

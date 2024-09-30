@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <title>inde</title>
+        <meta charset='utf-8' />
+        <style>
+            table, th, td {
+                border: 3px solid black;
+            }
+            td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <caption>Workforce</caption>
+            <tr>
+                <td>Name</td>
+                <td>Position</td>
+                <td>Salary</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Developer</td>
+                <td>150.000$</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>SMM</td>
+                <td>130.000$</td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td>DevOps</td>
+                <td>180.000$</td>
+            </tr>
+        </table>
+
+        <table>
+            <caption>MLW Alumni</caption>
+            <thead>
+              <tr>
+                <th rowspan="2" id="name" scope="col">Name</th>
+                <th colspan="2" id="path">Career path</th>
+                <th rowspan="2" id="year">Year</th>
+              </tr>
+              <tr>
+                <th id="past" scope="col">Past</th>
+                <th id="future" scope="col">Destiny</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th id="hal" scope="row">Hal Gibrah</th>
+                <td headers="hal path past">Calculator</td>
+                <td headers="hal path future">Mars rover</td>
+                <td>2020</td>
+              </tr>
+              <tr>
+                <th id="cathy" scope="row">Cathy Terr</th>
+                <td headers="cathy path past">Waste disposal</td>
+                <td headers="cathy path future">Automated teller</td>
+                <td>2018</td>
+              </tr>
+              <tr>
+                <th id="lou" scope="row">Lou Minious</th>
+                <td headers="lou path past">Lightbulb</td>
+                <td headers="lou path future">Smart bulb</td>
+                <td>1956</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br>
+
+          <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First name"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+          </form> 
+
+          <br>
+
+          <form>
+              <input type="radio" id="html" name="fav_language" value="HTML">
+              <label for="html">HTML</label><br>
+              <input type="radio" id="css" name="fav_language" value="CSS">
+              <label for="css">CSS</label><br>
+              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+              <label for="javascript">JavaScript</label>
+            </form> 
+
+            <br>
+
+            <form>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label><br><br>
+                <input type="submit" value="Submit">
+              </form> 
+
+            <form>
+                <input type="button">
+                <input type="checkbox" id="check"><label for="check">I am checkbox</label><br>
+                <input type="color" id="color"><label for="color">Choose color</label><br>
+                <input type="date" id="date"><label for="date">Choose date</label><br>
+                <input type="datetime-local" id="local"><label for="local">Local time</label><br>
+                <input type="email" id="email"><label for="email">Type email</label><br>
+                <input type="file" id="file"><label for="file">Choose file</label><br>
+                <input type="hidden"><br>
+                <input type="image" id="image"><label for="image">Choose image</label><br>
+                <input type="month" id="month"><label for="month">Choose month</label><br>
+                <input type="number"><br>
+                <input type="password"><br>
+                <input type="radio"><br>
+                <input type="range"><br>
+                <input type="reset"><br>
+                <input type="search"><br>
+                <input type="submit"><br>
+                <input type="tel"><br>
+                <input type="text"><br>
+                <input type="time"><br>
+                <input type="url"><br>
+                <input type="week"><br>
+            </form>
+
+            <br>
+
+            <form>
+                <label for="student">Pick a student:</label>
+                <select name="student" id="student">
+                  <option value="hoover">Hoover Sukhdeep</option>
+                  <option>Blendan Smooth</option>
+                  <option value="toasty">Toasty McToastface</option>
+                </select>
+                <input type="submit" value="Submit Form">
+            </form>
+
+            <video src="video/AirPods.mp4" poster="images/airpods.jpeg" width="640" height="480" controls>
+            </video>
+    </body>
+</html>

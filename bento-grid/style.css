@@ -33,16 +33,41 @@ h1, h2, h3 {
     line-height: 0.925;
 }
 
-.review {
+.purple-100 {
+    background-color: var(--purple-100);
+}
+
+.purple-500 {
     background-color: var(--purple-500);
-    padding: 35px;
-    border-radius: 8px;
+}
+
+.yellow-100 {
+    background-color: var(--yellow-100);
+}
+
+.yellow-500 {
+    background-color: var(--yellow-500);
+}
+
+.text-white {
     color: var(--white);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.card {
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
+}
+
+.review {
+    padding: 35px;
 }
 
 .review h1 {
@@ -59,15 +84,7 @@ h1, h2, h3 {
 }
 
 .accounts {
-    background-color: var(--yellow-100);
     padding: 15px;
-    border-radius: 8px;
-    color: var(--black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
 }
 
 .accounts img {
@@ -79,16 +96,9 @@ h1, h2, h3 {
 }
 
 .schedule {
-    background-color: var(--yellow-500);
     padding-inline: 15px;
     padding-top: 15px;
-    border-radius: 8px;
-    color: var(--black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: start;
-    gap: 15px;
 }
 
 .schedule img {
@@ -96,14 +106,7 @@ h1, h2, h3 {
 }
 
 .social {
-    background-color: var(--purple-100);
     padding: 30px 15px;
-    border-radius: 8px;
-    color: var(--black);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
@@ -118,6 +121,68 @@ h1, h2, h3 {
 .social p {
     text-align: center;
     max-width: 22ch;
+}
+
+.follower {
+    padding: 35px;
+    gap: 40px;
+}
+
+.follower img {
+    max-width: 30ch;
+}
+
+.follower h2 {
+    font-size: 32px;
+    text-align: center;
+    max-width: 15ch;
+}
+
+.growth {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    align-items: start;
+    gap: 20px;
+}
+
+.growth span {
+    font-size: 48px;
+}
+
+.growth img {
+    max-width: 23ch;
+}
+
+.post {
+    padding: 26px;
+    align-items: start;
+}
+
+.post h2 {
+    font-size: 32px;
+}
+
+.post h2 > span {
+    color: var(--purple-500);
+    font-style: italic;
+}
+
+.post img {
+    max-width: 20ch;
+}
+
+.ai {
+    padding: 25px;
+    align-items: start;
+    gap: 20px;
+}
+
+.ai h2 {
+    font-size: 32px;
+}
+
+.ai img {
+    max-width: 27ch;
 }
 
 .dm-sans-400 {

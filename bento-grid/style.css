@@ -20,6 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    min-height: 100dvh;
 }
 
 main {
@@ -183,6 +184,121 @@ h1, h2, h3 {
 
 .ai img {
     max-width: 27ch;
+}
+
+@media all and (min-width: 1200px) {
+    main {
+        padding: 20px;
+        max-height: 95dvh;
+        width: 80%;
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 300px 65px 145px 235px;
+        grid-template-areas: 
+        "post review review social"
+        "post accounts schedule social"
+        "ai  accounts schedule social"
+        "ai growth follower follower";
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .review {
+        grid-area: review;
+    }
+
+    .review h1 {
+        font-size: 60px;
+    }
+
+    .accounts {
+        grid-area: accounts;
+        justify-content: space-around;
+    }
+
+    .accounts h2 {
+        font-size: 32px;
+        }
+
+    .schedule {
+        grid-area: schedule;
+    }
+
+    .social {
+        grid-area: social;
+        justify-content: space-evenly;
+    }
+
+    .social h2 {
+        font-size: 34px;
+    }
+
+    .social p {
+        text-align: left;
+
+    }
+
+    .follower {
+        grid-area: follower;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .follower h2 {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .follower img {
+        max-width: 200px;
+        aspect-ratio: auto;
+    }
+
+    .growth {
+        grid-area: growth;
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    .growth h3 {
+        font-size: 18px;
+    }
+
+    .growth img {
+        max-width: 20ch;
+    }
+
+    .post {
+        grid-area: post;
+        padding: 35px;
+        gap: 25px;
+    }
+
+    .post h2 {
+        font-size: 38px;
+    }
+
+    .post img {
+        max-width: 100%;
+    }
+
+    .ai {
+       grid-area: ai; 
+       gap: 40px;
+    }
+
+    .ai h2 {
+        font-size: 36px;
+        max-width: 10ch;
+    }
+
+    .ai img {
+        max-width: 100%;
+    }
 }
 
 .dm-sans-400 {

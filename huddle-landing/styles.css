@@ -26,6 +26,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 100;
 }
 
 header a {
@@ -39,6 +42,10 @@ header a {
 
 main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 .hero {
@@ -48,10 +55,10 @@ main {
     background-size: cover;
     width: 100%;
     min-height: 100dvh;
-    padding-top: 88px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-block: 75px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3em;
     padding-inline: 60px;
 }
 
@@ -88,11 +95,14 @@ main {
 }
 
 .hero > img {
-    max-width: 50em;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .cards-section {
     padding: 8.5em 4em 5.5em 4em;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,6 +118,7 @@ main {
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
     padding: 80px;
     border-radius: 8px;
+    gap: 3em;
 }
 
 .card-text > h2 {
@@ -127,9 +138,12 @@ main {
 }
 
 .ready-action {
+    position: relative;
+    bottom: -105px;
     margin-inline: auto;
     padding: 50px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    background-color: white;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -151,7 +165,79 @@ main {
 footer {
     background-color: var(--very-dark-cyan);
     width: 100%;
-    padding-top: 8em;
+    padding-block: 8em;
+    padding-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3em;
+    color: white;
+}
+
+footer > img {
+    filter: grayscale(1) brightness(100);
+}
+
+.footer-columns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 5em;
+    place-items: start;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3em;
+}
+
+.footer-item > #location {
+    max-width: 45ch;
+}
+
+.footer-item > #location::before {
+    content: url("images/icon-location.svg");
+    padding-right: 2em;
+}
+
+.footer-item > #phone::before {
+    content: url("images/icon-phone.svg");
+    padding-right: 2em;
+}
+
+.footer-item > #email::before {
+    content: url("images/icon-email.svg");
+    padding-right: 2em;
+}
+
+.footer-item > nav > ul {
+    columns: 2 10em;
+    list-style-type: none;
+}
+
+.footer-item > nav > ul > li {
+    padding: 14px 16px;
+}
+
+.footer-item > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item:has(svg) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+}
+
+.copyright {
+    width: 100%;
+    text-align: end;
 }
 
 .poppins-600 {
@@ -178,5 +264,93 @@ footer {
       "wdth" 100;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media all and (max-width: 945px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    header a {
+        padding: 10px 45px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-message {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-message > h1,
+    .hero-message > p {
+        text-align: center;
+    }
+
+    .cards-section {
+        padding: 15px 20px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card > img {
+        max-width: 20em;
+    }
+
+    .card-text > * {
+        text-align: center;
+    }
+
+    .card:nth-of-type(1) > img,
+    .card:nth-of-type(3) > img {
+        order: -1;
+    }
+
+    .ready-action {
+        gap: 2em;
+        padding: 30px;
+        bottom: -80px;
+        width: 90%;
+    }
+
+    .ready-action > h3 {
+        font-size: 1.5rem;
+    }
+    
+    .ready-action > a {
+        font-size: 0.9rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-item > nav > ul {
+        columns: initial;
+    }
+
+    .socials {
+        justify-self: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main>
+    <h1 class="karla-700">Contact Us</h1>
+    <form>
+      <div class="input karla-400">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname"/>
+        <span class="error">This field is required</span>
+      </div>
+
+      <div class="input karla-400">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname"/>
+        <span class="error">This field is required</span>
+      </div>
+
+      <div class="input karla-400 full-column">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email"/>
+        <span class="error" data-error="Please enter a valid email address">This field is required</span>
+      </div>
+
+      <span class="full-column radio-label">Query Type</span>
+      <div class="radio">
+        <input type="radio" id="general" name="query" value="General Enquiry"/>
+        <label for="general">General Enquiry</label>
+      </div>
+      
+      <div class="radio">
+        <input type="radio" id="support" name="query" value="Support Request"/>
+        <label for="support">Support Request</label>
+      </div>
+      
+      <span class="error full-column">This field is required</span>
+
+      <div class="input karla-400 full-column">
+        <label for="tarea">Message</label>
+        <textarea name="tarea" id="tarea"></textarea>
+      </div>
+      
+      <div class="consent karla-400 full-column">
+        <input type="checkbox" id="contact" name="contact" />
+        <label for="contact">I consent to being contacted by the team</label>
+        <span class="error">To submit this form, please consent to being contacted</span>
+      </div>
+    </form>
+    <button popovertarget="success" class="karla-700">Submit</button>
+  </main>
+
+  <div id="success" popover>
+    <h4 class="karla-700">Message Sent!</h4>
+    <p class="karla-400">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+<script src="index.js"></script>
+</body>
+</html>

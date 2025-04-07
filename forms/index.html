@@ -13,7 +13,7 @@
 <body>
   <main>
     <h1 class="karla-700">Contact Us</h1>
-    <form>
+    <form class="grid-container">
       <div class="input karla-400">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="fname"/>
@@ -32,7 +32,9 @@
         <span class="error" data-error="Please enter a valid email address">This field is required</span>
       </div>
 
-      <span class="full-column radio-label">Query Type</span>
+      <section class="grid-container full-column karla-400">
+      <span class="radio-label full-column">Query Type</span>
+
       <div class="radio">
         <input type="radio" id="general" name="query" value="General Enquiry"/>
         <label for="general">General Enquiry</label>
@@ -44,19 +46,22 @@
       </div>
       
       <span class="error full-column">This field is required</span>
+      </section>
+      
 
       <div class="input karla-400 full-column">
         <label for="tarea">Message</label>
         <textarea name="tarea" id="tarea"></textarea>
+        <span class="error full-column">This field is required</span>
       </div>
       
       <div class="consent karla-400 full-column">
         <input type="checkbox" id="contact" name="contact" />
         <label for="contact">I consent to being contacted by the team</label>
-        <span class="error">To submit this form, please consent to being contacted</span>
+        <span class="error full-column">To submit this form, please consent to being contacted</span>
       </div>
+      <button id="submit" class="karla-700 full-column">Submit</button>
     </form>
-    <button popovertarget="success" class="karla-700">Submit</button>
   </main>
 
   <div id="success" popover>

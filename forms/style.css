@@ -38,7 +38,7 @@ main > h1 {
     color: var(--grey-900);
 }
 
-form {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     row-gap: 20px;
@@ -50,7 +50,6 @@ form {
 }
 
 .error {
-    color: var(--red);
     display: none;
 }
 
@@ -84,7 +83,12 @@ form {
     display: flex;
     align-items: center;
     justify-content: start;
+    flex-wrap: wrap;
     gap: 15px;
+}
+
+.consent > .error {
+    width: 100%;
 }
 
 button {
@@ -127,6 +131,15 @@ button {
 
 #success > p {
     color: var(--green-200);
+}
+
+.error-active > input {
+    border: 1px solid var(--red);
+}
+
+.error-active > span.error {
+    display: block;
+    color: var(--red);
 }
 
 /* popover animation */

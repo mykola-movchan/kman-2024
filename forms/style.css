@@ -19,10 +19,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 main {
-    max-width: 600px;
+    max-width: 500px;
     padding: 2em;
     border-radius: 16px;
     background-color: var(--white);
@@ -133,7 +134,8 @@ button {
     color: var(--green-200);
 }
 
-.error-active > input {
+.error-active > input,
+.error-active > textarea {
     border: 1px solid var(--red);
 }
 

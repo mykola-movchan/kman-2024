@@ -26,6 +26,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 2em 3em;
+    background-color: var(--dark-blue-intro);
 }
 
 header > nav > ul {
@@ -34,21 +35,44 @@ header > nav > ul {
     justify-content: center;
     align-items: center;
     gap: 3em;
+}
 
+header > nav > ul > li {
+    padding: 14px 16px;
+    transition: 0.5s;
+}
+
+header > nav > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header > #menu {
+    display: none;
 }
 
 main {
-    max-width: 1200px;
-    margin-inline: auto;
+    /* max-width: 1200px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 9em;
 }
 
 .intro {
+    width: 100%;
+    background-color: var(--dark-blue-intro);
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 1.5em;
-    padding-block: 2em;
+    background-image: url('images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .intro > img {
@@ -76,11 +100,14 @@ main {
     padding: 1em 4em;
     font-size: 1em;
     background: linear-gradient(to right, var(--cyan-cta), var(--blue-cta));
+    transition: 0.5s;
+}
+
+.intro > button:hover {
+    filter: brightness(120%);
 }
 
 .cards {
-    margin: 0 auto;
-    padding-block: 6em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -108,6 +135,11 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
+    padding-inline: 2em;
+}
+
+.demo > img {
+    max-width: 100%;
 }
 
 .productivity {
@@ -133,14 +165,24 @@ main {
     padding-bottom: 5px;
     text-decoration: none;
     border-bottom: 1px solid var(--cyan-cta);
+    transition: 0.5s;
 }
 
 .productivity > a > img {
     vertical-align: bottom;
 }
 
+.productivity > a:hover {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.productivity > a:hover > img {
+    filter: grayscale(1) brightness(100);
+}
+
 .review {
-    padding-block: 7em;
+    padding: 35px 48px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
@@ -154,7 +196,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    gap: 30px;
+    gap: 4em;
+    position: relative;
+    z-index: 10;
 }
 
 .profile {
@@ -162,12 +206,247 @@ main {
     grid-template-columns: 40px 1fr;
     grid-template-rows: repeat(2, 1fr);
     column-gap: 10px;
+    place-items: center start;
 }
 
 .profile > img {
     grid-row: 1 / -1;
     max-width: 100%;
     border-radius: 50%;
+}
+
+.testimony:nth-last-of-type(3)::before {
+    content: url('images/bg-quotes.png');
+    position: absolute;
+    z-index: -1;
+    top: -17%;
+    left: -3%;
+}
+
+.access {
+    background-color: var(--dark-blue-intro);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 4em;
+    margin-inline: 1em;
+    position: relative;
+    bottom: -115px;
+}
+
+.access > h2 {
+    font-size: 2rem;
+}
+
+.access > p {
+    text-align: center;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.access > form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.access > form > * {
+    border-radius: 25px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.access > form > input {
+    flex: 3;
+}
+
+.access > form > button {
+    flex: 1;
+    background: linear-gradient(to right, var(--cyan-cta), var(--blue-cta));
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.access > form > button:hover {
+    filter: brightness(120%);
+}
+
+footer {
+    background-color: var(--dark-blue-footer);
+    width: 100%;
+    padding-block: 8em;
+    padding-inline: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3em;
+    color: var(--white);
+}
+
+.footer-columns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    gap: 5em;
+    place-items: start;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3em;
+}
+
+.footer-item > #location {
+    max-width: 45ch;
+}
+
+.footer-item > #location::before {
+    content: url("images/icon-location.svg");
+    padding-right: 2em;
+}
+
+.footer-item > #phone::before {
+    content: url("images/icon-phone.svg");
+    padding-right: 2em;
+}
+
+.footer-item > #email::before {
+    content: url("images/icon-email.svg");
+    padding-right: 2em;
+}
+
+.footer-item > nav > ul {
+    columns: 2;
+    list-style-type: none;
+}
+
+.footer-item > nav > ul > li {
+    padding: 14px 16px;
+}
+
+.footer-item > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item:has(svg) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+}
+
+@media all and (max-width: 950px) {
+    .demo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 670px) {
+    header {
+        padding: 1em;
+    }
+
+    header > nav {
+        /* display: none; */
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+        position: absolute;
+        background-color: var(--dark-blue-footer);
+        right: 20px;
+        top: 100px;
+        min-width: 250px;
+        border-radius: 8px;
+        z-index: 100;
+    }
+
+    header > nav > ul {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    header > #menu {
+        display: block;
+        z-index: 100;
+    }
+
+    header > nav.open {
+        opacity: 1;
+    }    
+
+    main {
+        gap: 5em;
+        position: relative;
+        padding-bottom: 18em;
+    }
+
+    .intro {
+        padding-inline: 1em;
+    }
+
+    .intro > img {
+        max-width: 100%;
+    }
+
+    .review {
+        padding: 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .testimony:nth-last-of-type(3)::before {
+        top: -11%;
+    }
+
+    .access {
+        padding: 1em;
+        position: absolute;
+        bottom: -100px;
+    }
+
+    .access > h2 {
+        text-align: center;
+    }
+
+    .access > form {
+        flex-direction: column;
+    }
+
+    .access > form > * {
+        width: 90%;
+    }
+
+    footer {
+        padding-inline: 2em;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-item > nav > ul {
+        columns: 1;
+    }
 }
 
 .raleway-400 {

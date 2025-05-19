@@ -1,0 +1,146 @@
+:root {
+    --red: hsl(14, 86%, 42%);
+    --green: hsl(159, 69%, 38%);
+    --rose-50: hsl(20, 50%, 98%);
+    --rose-100: hsl(13, 31%, 94%);
+    --rose-300: hsl(14, 25%, 72%);
+    --rose-400: hsl(7, 20%, 60%);
+    --rose-500: hsl(12, 20%, 44%);
+    --rose-900: hsl(14, 65%, 9%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: var(--rose-100);
+    padding-inline: 3em;
+    padding-block: 2em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    gap: 2em;
+    max-width: 1200px;
+}
+
+.desserts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2em;
+}
+
+.desserts h1 {
+    font-size: 2em;
+    color: var(--rose-900);
+}
+
+.menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0.6em;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card .add {
+    align-self: center;
+    padding: 10px 20px;
+    border: 1px solid var(--rose-500);
+    border-radius: 32px;
+    background-color: var(--rose-50);
+    font-size: 1em;
+    margin-top: -32px;
+}
+
+.add img {
+    vertical-align: bottom;
+}
+
+.card .category {
+    color: var(--rose-400);
+    font-size: 0.8em;
+}
+
+.card .name {
+    color: var(--rose-900);
+    font-size: 1em;
+}
+
+.card .price {
+    color: var(--red);
+    font-size: 1em;
+}
+
+.card .price::before {
+    content: '$';
+}
+
+.cart {
+    background-color: var(--rose-50);
+    border-radius: 8px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5em;
+    height: fit-content;
+}
+
+.cart h2 {
+    align-self: start;
+    font-size: 1.5em;
+    color: var(--red);
+}
+
+.cart span {
+    color: var(--rose-500);
+    font-size: 0.9em;
+}
+
+.red-hat-text-400 {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red-hat-text-600 {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.red-hat-text-700 {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

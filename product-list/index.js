@@ -1,11 +1,10 @@
-// scripts/desserts.js
-
 function populateDesserts(data) {
   const gridContainer = document.querySelector('section.menu');
 
   data.forEach(dessert => {
     const card = document.createElement('div');
     card.className = 'card';
+    card.dataset.info = `${dessert.name} ${dessert.price}`;
 
     card.innerHTML = `
       <img src="${dessert.image.desktop}" alt="${dessert.name}">

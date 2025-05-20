@@ -17,82 +17,60 @@
     <h1 class="red-hat-text-700">Desserts</h1>
 
     <section class="menu">
-      <!-- <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div>
-
-      <div class="card">
-        <img src="images/image-waffle-desktop.jpg" alt="">
-        <button class="add red-hat-text-600">
-          <img src="images/icon-add-to-cart.svg" alt=""> Add to Cart
-        </button>
-        <span class="category red-hat-text-400">Waffle</span>
-        <h3 class="name red-hat-text-700">Waffle with Berries</h3>
-        <h4 class="price red-hat-text-600">6.50</h4>
-      </div> -->
+      
     </section>
   </section>
 
   <section class="cart">
     <h2 class="red-hat-text-700">Your Cart (0)</h2>
-    <img src="images/illustration-empty-cart.svg" alt="">
-    <span class="red-hat-text-600">Your added items will appear here</span>
+    <div class="empty-cart">
+      <img src="images/illustration-empty-cart.svg" alt="">
+      <span class="red-hat-text-600">Your added items will appear here</span>
+    </div>
+
+    <div class="cart-items">
+      <div class="order">
+        <div class="item">
+          <h3 id="item-name" class="red-hat-text-600">Classic Tiramisu</h3>
+          <span class="stats">
+            <quantity class="red-hat-text-600">1x</quantity>
+            <rate class="red-hat-text-400">5.50</rate>
+            <total class="red-hat-text-600">5.50</total>
+          </span>
+          <img src="images/icon-remove-item.svg" alt="">
+        </div>
+
+        <div class="item">
+          <h3 id="item-name" class="red-hat-text-600">Classic Tiramisu</h3>
+          <span class="stats">
+            <quantity class="red-hat-text-600">1x</quantity>
+            <rate class="red-hat-text-400">5.50</rate>
+            <total class="red-hat-text-600">5.50</total>
+          </span>
+          <img src="images/icon-remove-item.svg" alt="">
+        </div>
+
+        <div class="item">
+          <h3 id="item-name" class="red-hat-text-600">Classic Tiramisu</h3>
+          <span class="stats">
+            <quantity class="red-hat-text-600">1x</quantity>
+            <rate class="red-hat-text-400">5.50</rate>
+            <total class="red-hat-text-600">5.50</total>
+          </span>
+          <img src="images/icon-remove-item.svg" alt="">
+        </div>
+      </div>
+
+      <div class="total">
+        <span class="red-hat-text-400">Order Total</span>
+        <h3 id="total" class="red-hat-text-700">$46.50</h3>
+      </div>
+
+      <div class="eco red-hat-text-400">
+        <img src="images/icon-carbon-neutral.svg" alt=""> This is a <strong>carbon-neutral</strong> delivery
+      </div>
+      <button class="confirm red-hat-text-600">Confirm order</button>
+    </div>
   </section>
 
 </main>

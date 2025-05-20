@@ -79,6 +79,10 @@ main {
     vertical-align: bottom;
 }
 
+.card.selected > img {
+    border: 3px solid var(--red);
+}
+
 .card .category {
     color: var(--rose-400);
     font-size: 0.8em;
@@ -119,6 +123,106 @@ main {
 .cart span {
     color: var(--rose-500);
     font-size: 0.9em;
+}
+
+.empty-cart {
+    /* display: flex; */
+    display: none;
+    flex-direction: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    gap: inherit;
+}
+
+.cart-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1em;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--rose-100);
+    padding-block: 1em;
+}
+
+.item img {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    border: 1px solid var(--rose-300);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.stats {
+    font-size: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.stats quantity {
+    color: var(--red);
+}
+
+.stats rate::before {
+    content: '@ $';
+}
+
+.stats total::before {
+    content: '$';
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5em;
+    width: 100%;
+}
+
+.total h3 {
+    font-size: 2em;
+}
+
+.eco {
+    text-align: center;
+    padding-block: 1em;
+    background-color: var(--rose-100);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.eco img {
+    vertical-align: top;
+}
+
+.confirm {
+    background-color: var(--red);
+    color: var(--rose-50);
+    font-size: 1em;
+    width: 100%;
+    padding-block: 0.8em;
+    border-radius: 32px;
+    border: none;
 }
 
 .red-hat-text-400 {

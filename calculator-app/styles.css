@@ -1,0 +1,148 @@
+:root {
+    /* Theme 1 */
+    /* Backgrounds */
+    --very-dark-desaturated-blue-main: hsl(222, 26%, 31%); /* (main background) */
+    --very-dark-desaturated-blue-toggle: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+    --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%); /* (screen background) */
+
+    /* Keys */
+    --desaturated-dark-blue-key-bg: hsl(225, 21%, 49%); /* (key background) */
+    --desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%); /* (key shadow) */
+    --red: hsl(6, 63%, 50%); /* (key background, toggle) */
+    --dark-red-key-shadow: hsl(6, 70%, 34%); /* (key shadow) */
+    --light-grayish-orange-key-bg: hsl(30, 25%, 89%); /* (key background) */
+    --grayish-orange-key-shadow: hsl(28, 16%, 65%); /* (key shadow) */
+
+    /* Text */
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Theme 2 */
+    /* Backgrounds */
+    --light-gray-main: hsl(0, 0%, 90%); /* (main background) */
+    --grayish-red-toggle: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+    --very-light-gray-screen: hsl(0, 0%, 93%); /* (screen background) */
+
+    /* Keys */
+
+    --dark-moderate-cyan: hsl(185, 42%, 37%); /* (key background) */
+    --very-dark-cyan-key-shadow: hsl(185, 58%, 25%); /* (key shadow) */
+    --orange-key-bg: hsl(25, 98%, 40%); /* (key background, toggle) */
+    --dark-orange-key-shadow: hsl(25, 99%, 27%); /* (key shadow) */
+    --light-grayish-yellow-key-bg: hsl(45, 7%, 89%); /* (key background) */
+    --dark-grayish-orange-key-shadow: hsl(35, 11%, 61%); /* (key shadow) */
+
+    /* Text */
+    --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    
+    /* Theme 3 */
+    /* Backgrounds */
+    --very-dark-violet-main: hsl(268, 75%, 9%); /* (main background) */
+    --very-dark-violet-all: hsl(268, 71%, 12%); /* (toggle background, keypad background, screen background) */
+
+    /* Keys */
+    --dark-violet-key-bg: hsl(281, 89%, 26%); /* (key background) */
+    --vivid-magenta-key-shadow: hsl(285, 91%, 52%); /* (key shadow) */
+    --pure-cyan-key-bg: hsl(176, 100%, 44%); /* (key background, toggle) */
+    --soft-cyan-key-shadow: hsl(177, 92%, 70%); /* (key shadow) */
+    --very-dark-violet-key-bg: hsl(268, 47%, 21%); /* (key background) */
+    --dark-magenta-key-shadow: hsl(290, 70%, 36%); /* (key shadow) */
+
+    /* Text */
+    --light-yellow: hsl(52, 100%, 62%);
+    --very-dark-blue: hsl(198, 20%, 13%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem;
+    background-color: var(--very-dark-desaturated-blue-main);
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+main:has(#theme-selector[data-theme-profile="1"]) {
+
+}
+
+main:has(#theme-selector[data-theme-profile="2"]) {
+    
+}
+
+main:has(#theme-selector[data-theme-profile="3"]) {
+    
+}
+
+main {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5em;
+
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header div button {
+    font-size: 1.2em;
+    padding-inline: 7px;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    background-color: var(--very-dark-desaturated-blue-screen);
+    font-size: 2rem;
+    color: white;
+    font-family: inherit;
+    direction: rtl;
+}
+
+keypad {
+    padding: 1em;
+    background-color: var(--very-dark-desaturated-blue-toggle);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+keypad > button {
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1em;
+}
+
+button[data-key="RESET"],
+button[data-key="DEL"] {
+    font-size: 1.5rem;
+}
+
+button[data-key="RESET"] {
+    grid-column: 1 / 3;
+}
+
+button[data-key="="] {
+    grid-column: 3 / -1;
+}
+
+.league-spartan-700 {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

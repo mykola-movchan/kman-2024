@@ -59,24 +59,64 @@
     box-sizing: border-box;
 }
 
+body:has(#theme-selector[data-theme-profile="1"]) {
+    --main-bg: var(--very-dark-desaturated-blue-main);
+    --keypad-bg: var(--very-dark-desaturated-blue-toggle);
+    --input-bg: var(--very-dark-desaturated-blue-screen);
+
+    --del-reset-bg: var(--desaturated-dark-blue-key-bg);
+    --del-reset-shadow: var(--desaturated-dark-blue-key-shadow);
+    --action-button-bg: var(--red);
+    --action-button-shadow: var(--dark-red-key-shadow);
+    --regular-button-bg: var(--light-grayish-orange-key-bg);
+    --regular-button-shadow: var(--grayish-orange-key-shadow);
+
+    --keypad-color: var(--very-dark-grayish-blue);
+    --screen-color: var(--white);
+    --secondary-color: var(--white);
+}
+
+body:has(#theme-selector[data-theme-profile="2"]) {
+    --main-bg: var(--light-gray-main);
+    --keypad-bg: var(--grayish-red-toggle);
+    --input-bg: var(--very-light-gray-screen);
+
+    --del-reset-bg: var(--dark-moderate-cyan);
+    --del-reset-shadow: var(--very-dark-cyan-key-shadow);
+    --action-button-bg: var(--orange-key-bg);
+    --action-button-shadow: var(--dark-orange-key-shadow);
+    --regular-button-bg: var(--light-grayish-yellow-key-bg);
+    --regular-button-shadow: var(--dark-grayish-orange-key-shadow);
+
+    --keypad-color: var(--very-dark-grayish-yellow);
+    --screen-color: var(--very-dark-grayish-yellow);
+    --secondary-color: var(--white);
+}
+
+body:has(#theme-selector[data-theme-profile="3"]) {
+    --main-bg: var(--very-dark-violet-main);
+    --keypad-bg: var(--very-dark-violet-all);
+    --input-bg: var(--very-dark-violet-all);
+
+    --del-reset-bg: var(--dark-violet-key-bg);
+    --del-reset-shadow: var(--vivid-magenta-key-shadow);
+    --action-button-bg: var(--pure-cyan-key-bg);
+    --action-button-shadow: var(--soft-cyan-key-shadow);
+    --regular-button-bg: var(--very-dark-violet-key-bg);
+    --regular-button-shadow: var(--dark-magenta-key-shadow);
+
+    --keypad-color: var(--light-yellow);
+    --screen-color: var(--light-yellow);
+    --secondary-color: var(--white);
+    --black-color: var(--very-dark-blue);
+}
+
 body {
     font-size: 2rem;
-    background-color: var(--very-dark-desaturated-blue-main);
+    background-color: var(--main-bg);
     min-height: 100dvh;
     display: grid;
     place-items: center;
-}
-
-main:has(#theme-selector[data-theme-profile="1"]) {
-
-}
-
-main:has(#theme-selector[data-theme-profile="2"]) {
-    
-}
-
-main:has(#theme-selector[data-theme-profile="3"]) {
-    
 }
 
 main {
@@ -97,24 +137,31 @@ header {
     width: 100%;
 }
 
+header h1 {
+    color: var(--screen-color);
+}
+
 header div button {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     padding-inline: 7px;
 }
 
 input {
     width: 100%;
     padding: 1em;
-    background-color: var(--very-dark-desaturated-blue-screen);
+    border-radius: 16px;
+    border: none;
+    background-color: var(--input-bg);
     font-size: 2rem;
-    color: white;
+    color: var(--screen-color);
     font-family: inherit;
     direction: rtl;
 }
 
 keypad {
     padding: 1em;
-    background-color: var(--very-dark-desaturated-blue-toggle);
+    background-color: var(--keypad-bg);
+    border-radius: 8px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -122,14 +169,24 @@ keypad {
 }
 
 keypad > button {
+    --button-shadow: var(--regular-button-shadow);
+    border: none;
+    border-radius: 8px;
     font-size: 2rem;
     font-family: inherit;
-    padding: 1em;
+    padding: 1rem;
+    background-color: var(--regular-button-bg);
+    color: var(--keypad-color);
+    box-shadow: 0px 6px 0px 0px var(--button-shadow);
+    position: relative;
 }
 
-button[data-key="RESET"],
-button[data-key="DEL"] {
+keypad > button[data-key="RESET"],
+keypad > button[data-key="DEL"] {
+    --button-shadow: var(--del-reset-shadow);
     font-size: 1.5rem;
+    background-color: var(--del-reset-bg);
+    color: var(--secondary-color);
 }
 
 button[data-key="RESET"] {
@@ -138,6 +195,18 @@ button[data-key="RESET"] {
 
 button[data-key="="] {
     grid-column: 3 / -1;
+    --button-shadow: var(--action-button-shadow);
+    color: var(--secondary-color);
+    background-color: var(--action-button-bg);
+}
+
+body:has(#theme-selector[data-theme-profile="3"]) button[data-key="="] {
+    color: var(--black-color);
+}
+
+keypad > button:active {
+    box-shadow: 0px 0px 0px 0px var(--button-shadow);
+    top: 3px
 }
 
 .league-spartan-700 {
